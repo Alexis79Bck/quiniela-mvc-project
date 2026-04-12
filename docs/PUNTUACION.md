@@ -6,21 +6,22 @@
 
 | Acierto | Puntos |
 |---------|--------|
-| Ganador/Empate + Marcador Exacto (marcador exacto) | 5 puntos |
-| Ganador/Empate | 3 puntos |
-| Adicional: Acierto en Goles de Equipos (Excepto Marcador Exacto) | 1 puntos |
-| Incorrecto | 0 puntos |
+| Ganador/Empate + Marcador Exacto | 5 puntos |
+| Solo Ganador/Empate | 3 puntos |
+| Adicional: Acierto en Goles de un Equipos (Excepto Marcador Exacto) | 1 puntos |
+| Bono: Acierto Total de Goles | 2 | Acertar el numero Total de goles. Opcional solo si el Jugador lo habilita para el evento. |
+| No Acierto | 0 puntos |
 
 ### Ejemplos
+**Partido**: Brasil 2 - 1 Argentina
 
-```
-Partido: Argentina 2 - 1 Brasil
-
-Predicción: Argentina 2 - 1 Brasil → 10 puntos (exacto)
-Predicción: Argentina 3 - 1 Brasil → 5 puntos (ganador correcto)
-Predicción: Argentina 1 - 1 Brasil → 1 punto (Acierto en Goles Brasil 1)
-Predicción: Brasil 2 - 1 Argentina → 0 puntos (incorrecto)
-```
+| Predicción | Puntos | Razón |
+|------------|--------|-------|
+| Brasil 2 - 1 Argentina | 5 | Resultado exacto |
+| Brasil 3 - 1 Argentina | 3 | Ganador correcto |
+| Brasil 2 - 0 Argentina | 1 | Acierto de Gol de un Equipo |
+| Brasil 3 - 0 Argentina | 2 | BONO: Si esta habilitado, Acierto de total de goles |
+| Brasil 0 - 2 Argentina | 0 | Sin Acierto |
 
 ## Clasificación (Leaderboard)
 
@@ -35,7 +36,7 @@ Predicción: Brasil 2 - 1 Argentina → 0 puntos (incorrecto)
 - Posición actual del usuario
 - Puntuación total
 - Número de aciertos (totales)
-- Comparación con top 3
+- Comparación con top 3. Mostrar Diferencia de totales con el Top 1
 
 ## Cálculo Automático
 
@@ -91,8 +92,8 @@ Jornada 1 - Grupo A:
 ## Límites
 
 - **Predicciones**: Ilimitadas (una por partido)
-- **Edición**: Hasta 1 hora antes del partido
+- **Edición**: Hasta 5 minutos antes del partido
 - **Puntuación máxima teórica**:
-  - Grupos: 48 × 10 = 480 puntos
+  - Grupos: 48 × 5 =  puntos
   - Eliminación: 31 × 15 = 465 puntos
   - Total: 945 puntos

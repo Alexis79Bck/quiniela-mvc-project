@@ -6,7 +6,8 @@
 | Campo | Tipo | Descripción |
 |-------|------|-------------|
 | id | bigint | PK |
-| name | string | Nombre completo |
+| fullname | string | Nombre completo |
+| username | string | Nombre de usuario único |
 | email | string | Email único |
 | password | string | Hash bcrypt |
 | points | integer | Puntos acumulados |
@@ -18,7 +19,7 @@
 |-------|------|-------------|
 | id | bigint | PK |
 | name | string | Nombre del equipo |
-| code | string | Código FIFA (ARG, BRA...) |
+| fifa_code | string | Código FIFA (ARG, BRA...) |
 | flag | string | URL del escudo |
 | group_id | bigint | FK group_id |
 | created_at | timestamp | |
