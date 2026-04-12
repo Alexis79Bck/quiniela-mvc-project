@@ -13,6 +13,9 @@ class AuthenticationTest extends TestCase
 
     public function test_users_can_register(): void
     {
+        // Ejecutar seeder de roles si no está en RefreshDatabase
+        $this->artisan('db:seed', ['--class' => 'RolePermissionSeeder']);
+
         $response = $this->postJson('/api/register', [
             'fullname' => 'Test User',
             'username' => 'testuser',
@@ -31,6 +34,9 @@ class AuthenticationTest extends TestCase
             'email' => 'test@example.com',
             'username' => 'testuser',
         ]);
+
+        $user = User::where('email', 'test@example.com')->first();
+        $this->assertTrue($user->hasRole('Jugador'));
     }
 
     public function test_users_can_login(): void

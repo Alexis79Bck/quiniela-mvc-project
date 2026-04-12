@@ -2,5 +2,12 @@
     "agents": [
         "cursor"
     ],
-    "guidelines": true
+    "packages": [
+        "spatie/laravel-permission"
+    ],
+    "skills": [
+        "fortify-development",
+        "laravel-best-practices",
+        "laravel-permission-development"
+    ]
 }

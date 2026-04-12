@@ -27,6 +27,9 @@ class AuthController extends Controller
             'password' => Hash::make($validated['password']),
         ]);
 
+        // Asignar rol por defecto 'Jugador'
+        $user->assignRole('Jugador');
+
         $token = $user->createToken('auth-token')->plainTextToken;
 
         return response()->json([
